@@ -211,7 +211,7 @@ POST localhost:8080/api/v1/hours-interval/filter-avaliable
 }
 ```
 
-#### Subjects Students:
+#### Reserved Hours:
 
 ```
 POST localhost:8080/api/v1/hours-interval/filter-reserved
