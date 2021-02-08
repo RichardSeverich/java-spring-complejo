@@ -12,9 +12,12 @@ import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+* Class.
+*/
 @Entity
-@Table(name = "resources")
-public class Resource {
+@Table(name = "hours_intervals")
+public class HoursInterval {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,16 +26,10 @@ public class Resource {
   private Integer id;
 
   @NotNull
-  @Size(min = 10, max = 120)
+  @Size(min = 1, max = 12)
   @Column(name = "name")
   @Getter @Setter
   private String name;
-
-  @NotNull
-  @Size(min = 1, max = 10)
-  @Column(name = "price_hour")
-  @Getter @Setter
-  private float priceHour;
 
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
@@ -53,6 +50,6 @@ public class Resource {
   /**
   * Constructor.
   */
-  public Resource() {
+  public HoursInterval() {
   }
 }

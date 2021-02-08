@@ -89,7 +89,7 @@ public class User {
   private String email;
 
   @NotNull
-  @Size(min = 5, max = 6)
+  @Size(min = 5, max = 10)
   @Pattern(regexp = "(admin|instructor)")
   @Column(name = "type")
   @Getter @Setter

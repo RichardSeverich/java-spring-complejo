@@ -21,15 +21,261 @@ INSERT INTO users (username, password, dni, name, father_last_name, mother_last_
 INSERT INTO users (username, password, dni, name, father_last_name, mother_last_name, birth_date, telephone, address, email, type, created_by) VALUES ("nasa", "nasa", "9985504", "Keyur", "Rpuu", "Atroculope", "1997-04-10", "75594787", "Av. Inv. Las rutas", "Keyur.Rpuu@gmail.com", "instructor", "admin");
 INSERT INTO users (username, password, dni, name, father_last_name, mother_last_name, birth_date, telephone, address, email, type, created_by) VALUES ("micky", "secret123", "675849", "miguel", "aguilar", "paredes", "1994-10-10", "77845322", "Av. B. Galindo", "10miguel94@gmail.com", "instructor", "admin");
 
---Resources
-INSERT INTO resources (name, created_by) VALUES ("cancha de basquet", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de voleibol", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de futbol", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de futsal", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de tenis", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de atletismo", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de rugby", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de beach voley", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha de wally", "micky");
-INSERT INTO resources (name, created_by) VALUES ("cancha multiple", "micky");
+-- Resources
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de basquet", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de voleibol", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de futbol", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de futsal", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de tenis", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de atletismo", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de rugby", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de beach voley", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha de wally", "50", "micky");
+INSERT INTO resources (name, price_hour, created_by) VALUES ("cancha multiple", "50", "micky");
 
+-- Hours Intervals
+INSERT INTO hours_intervals (name, created_by) VALUES ("5:00-5:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("5:30-6:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("6:00-6:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("6:30-7:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("7:00-7:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("7:30-8:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("8:00-8:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("8:30-9:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("9:00-9:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("9:30-10:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("10:00-10:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("10:30-11:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("11:00-11:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("11:30-12:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("12:00-12:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("12:30-13:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("13:00-13:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("13:30-14:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("14:00-14:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("14:30-15:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("15:00-15:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("15:30-16:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("16:00-16:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("16:30-17:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("17:00-17:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("17:30-18:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("18:00-18:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("18:30-19:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("19:00-19:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("19:30-20:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("20:00-20:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("20:30-21:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("21:00-21:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("21:30-22:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("22:00-22:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("22:30-23:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("23:00-23:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("23:30-00:00", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("00:00-00:30", "micky");
+INSERT INTO hours_intervals (name, created_by) VALUES ("00:30-01:00", "micky");
+
+-- Bookings
+-- date 2021-01-03
+-- BOOKING date 2021-01-03 RESOURCE (1000 = cancha de basquet) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1000, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1001, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1002, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1003, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1004, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1005, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1006, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1007, "2021-01-03", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-03 RESOURCE (1001 = cancha de voleibol) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1008, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1009, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1010, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1011, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1012, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1013, "2021-01-03", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-03 RESOURCE (1002 = cancha de futbol) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1014, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1015, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1016, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1017, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1018, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1019, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1020, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1021, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1022, "2021-01-03", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-03 RESOURCE (1003 = cancha de futsal) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1023, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1024, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1025, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1026, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1027, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1028, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1029, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1030, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1031, "2021-01-03", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-03 RESOURCE (1007 = cancha de beach voley) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1007, 1032, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1007, 1033, "2021-01-03", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-03 RESOURCE (1008 = cancha de beach voley) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1034, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1035, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1036, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1037, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1038, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1039, "2021-01-03", "Reserving from Micky", "micky");
+
+-- date 2021-01-04
+-- BOOKING date 2021-01-04 RESOURCE (1000 = cancha de basquet) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1000, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1001, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1002, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1003, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1004, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1005, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1006, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1000, 1007, "2021-01-04", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-04 RESOURCE (1001 = cancha de voleibol) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1008, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1009, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1010, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1011, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1012, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1001, 1013, "2021-01-04", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-04 RESOURCE (1002 = cancha de futbol) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1014, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1015, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1016, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1017, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1018, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1019, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1020, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1021, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1002, 1022, "2021-01-04", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-04 RESOURCE (1003 = cancha de futsal) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1023, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1024, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1025, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1026, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1027, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1028, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1029, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1030, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1031, "2021-01-04", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-04 RESOURCE (1007 = cancha de beach voley) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1007, 1032, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1007, 1033, "2021-01-04", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-04 RESOURCE (1008 = cancha de beach voley) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1034, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1035, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1036, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1037, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1038, "2021-01-04", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1039, "2021-01-04", "Reserving from Micky", "micky");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- BOOKING date 2021-01-03 RESOURCE (1003 = cancha de futsal) at HOUR (...)
+/*INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1000, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1001, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1002, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1003, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1004, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1005, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1010, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1011, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1012, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1013, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1014, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1015, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1025, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1026, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1027, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1028, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1029, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1033, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1034, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1035, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1003, 1038, "2021-01-03", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-03 RESOURCE (1008 = cancha de wally) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1000, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1002, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1003, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1005, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1006, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1008, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1009, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1010, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1011, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1012, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1013, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1015, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1018, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1019, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1020, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1022, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1025, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1026, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1027, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1028, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1029, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1033, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1034, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1035, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1008, 1038, "2021-01-03", "Reserving from Micky", "micky");
+
+-- BOOKING date 2021-01-03 RESOURCE (1009 = cancha multiple) at HOUR (...)
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1000, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1002, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1003, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1005, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1006, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1008, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1009, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1010, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1011, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1012, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1013, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1015, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1018, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1019, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1020, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1022, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1025, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1026, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1027, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1028, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1029, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1033, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1034, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1035, "2021-01-03", "Reserving from Micky", "micky");
+INSERT INTO bookings (id_resource, id_hours_interval, booking_date, comments, created_by) VALUES (1009, 1038, "2021-01-03", "Reserving from Micky", "micky");*/

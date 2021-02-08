@@ -9,8 +9,15 @@ public class RepositoryFactory {
 
   @Autowired
   private RepositoryUsers repositoryUsers;
+
   @Autowired
   private RepositoryResources repositoryResources;
+
+  @Autowired
+  private RepositoryBookings repositoryBookings;
+
+  @Autowired
+  private RepositoryHoursIntervals repositoryHoursIntervals;
 
   /**
    *.
@@ -23,6 +30,10 @@ public class RepositoryFactory {
         return repositoryUsers;
       case "resource":
         return repositoryResources;
+      case "booking":
+        return repositoryBookings;
+      case "hoursInterval":
+        return repositoryHoursIntervals;
       default:
         return repositoryUsers;
     }
