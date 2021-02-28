@@ -5,17 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.validation.constraints.Min;
 
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+* Class.
+*/
 @Entity
-@Table(name = "resources")
-public class Resource {
+public class BookingsResourcesHoursJoin {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,17 +21,13 @@ public class Resource {
   @Getter @Setter
   private Integer id;
 
-  @NotNull
-  @Size(min = 5, max = 120)
-  @Column(name = "name")
+  @Column(name = "hours_interval_name")
   @Getter @Setter
-  private String name;
+  private String hoursIntervalName;
 
-  @NotNull
-  @Min(10)
-  @Column(name = "price_hour")
+  @Column(name = "comments")
   @Getter @Setter
-  private float priceHour;
+  private String comments;
 
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
@@ -51,9 +45,13 @@ public class Resource {
   @Getter @Setter
   private String updatedBy;
 
+  @Column(name = "billed")
+  @Getter @Setter
+  private boolean billed;
+
   /**
   * Constructor.
   */
-  public Resource() {
+  public BookingsResourcesHoursJoin() {
   }
 }

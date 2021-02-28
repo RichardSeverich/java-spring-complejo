@@ -2,7 +2,7 @@ package com.complejo.controllers;
 
 import com.complejo.helpers.Helper;
 import com.complejo.models.HoursInterval;
-import com.complejo.models.Booking;
+import com.complejo.models.BookingsResourcesHoursJoin;
 import com.complejo.models.BookingFilter;
 import com.complejo.models.Resource;
 import com.complejo.responses.Response;
@@ -47,8 +47,8 @@ public class ControllerHoursIntervalFilter {
   */
   @SuppressWarnings("unchecked")
   @RequestMapping(method = RequestMethod.POST, value = Paths.PATH_RESERVED_HOURS)
-  public ResponseEntity<ResponseBody<HoursInterval>> hoursReserved(final @RequestBody @Valid BookingFilter bookingFilter) {
-    Response<HoursInterval> response = serviceGetFilterReservedHours.getResponse(bookingFilter);
+  public ResponseEntity<ResponseBody<BookingsResourcesHoursJoin>> hoursReserved(final @RequestBody @Valid BookingFilter bookingFilter) {
+    Response<BookingsResourcesHoursJoin> response = serviceGetFilterReservedHours.getResponse(bookingFilter);
     return ResponseEntity.status(response.getHttpStatus()).body(response.getBody());
   }
 }

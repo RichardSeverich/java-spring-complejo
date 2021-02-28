@@ -7,15 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.validation.constraints.Min;
 
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+* Class.
+*/
 @Entity
-@Table(name = "resources")
-public class Resource {
+@Table(name = "bills_detail")
+public class BillsDetail {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,16 +25,14 @@ public class Resource {
   private Integer id;
 
   @NotNull
-  @Size(min = 5, max = 120)
-  @Column(name = "name")
+  @Column(name = "id_booking")
   @Getter @Setter
-  private String name;
+  private Integer idBooking;
 
   @NotNull
-  @Min(10)
-  @Column(name = "price_hour")
+  @Column(name = "id_bill")
   @Getter @Setter
-  private float priceHour;
+  private Integer idBill;
 
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter
@@ -54,6 +53,6 @@ public class Resource {
   /**
   * Constructor.
   */
-  public Resource() {
+  public BillsDetail() {
   }
 }

@@ -226,6 +226,116 @@ POST localhost:8080/api/v1/hours-interval/filter-reserved
 }
 ```
 
+#### Users Reserved By Date:
+
+```
+POST localhost:8080/api/v1/users/filter-who-reserved
+
+{
+  "id": 1018,
+  "username": "dvera",
+  "password": "secret",
+  "dni": "9985503",
+  "name": "Daniel",
+  "fatherLastName": "Vera",
+  "motherLastName": "Serrano",
+  "birthDate": "1997-03-11",
+  "telephone": "78884487",
+  "address": "Av. Webar",
+  "email": "Daniel.Vera@gmail.com",
+  "type": "client",
+  "creationDate": "2021-02-23 03:33:06",
+  "updateDate": null,
+  "createdBy": "admin",
+  "updatedBy": null
+} 
+
+```
+
+#### Bookings Resources Hours Join:
+
+```
+POST localhost:8080/api/v1/reserved-resources
+
+{
+  "id": 1024,
+  "comments": "Reserving from dvera",
+  "resourceName": "cancha de basquet",
+  "priceHour": "50",
+  "hoursIntervalName": "6:00-7:00",
+  "creationDate": "2021-02-23 03:33:08",
+  "updateDate": "2021-02-24 01:16:08",
+  "createdBy": "dvera",
+  "updatedBy": null
+}
+```
+
+#### Bill For Post (Insert BillsDetail And Bill):
+
+```
+POST localhost:8080/api/v1/bills
+```
+
+#### : Bill
+
+```
+POST localhost:8080/api/v1/bills/filter-date
+
+{
+  "id": 1006,
+  "billsDate": "2021-02-26",
+  "billsDateLimit": "2021-05-26",
+  "billsControlCode": "EO-89-C4-A2",
+  "bookingDate": "2021-02-12",
+  "companyName": "COE - Circulo de Oficiales del Ejercito",
+  "companyNit": "123456789",
+  "companyAuthorization": "2-4001-57944",
+  "clientName": "aguilar",
+  "clientNit": "675849",
+  "creationDate": "2021-02-26 22:01:12",
+  "updateDate": null,
+  "createdBy": "admin",
+  "updatedBy": null
+}
+```
+#### Bills Detail:
+
+```
+GET localhost:8080/api/v1/bills-detail
+POST localhost:8080/api/v1/bills-detail
+GET localhost:8080/api/v1/bills-detail/{id}
+PUT localhost:8080/api/v1/bills-detail/{id}
+DELETE localhost:8080/api/v1/bills-detail/{id}
+
+{
+  "id": 1,
+  "idBooking": 1025,
+  "idBill": 1006,
+  "creationDate": "2021-02-26 22:01:12",
+  "updateDate": null,
+  "createdBy": "admin",
+  "updatedBy": null
+}
+```
+
+#### : Resources Hours Bookings Bills BillsDetail Join
+
+```
+POST localhost:8080/api/v1/bills/detail
+
+{
+  "id": 5,
+  "comments": "Reserving from dvera",
+  "resourceName": "cancha de voleibol",
+  "priceHour": "50",
+  "hoursIntervalName": "8:00-9:00",
+  "creationDate": "2021-02-27 00:42:34",
+  "updateDate": null,
+  "createdBy": "admin",
+  "updatedBy": null
+}
+```
+
 ## Contributing
 
 1. Fork it!

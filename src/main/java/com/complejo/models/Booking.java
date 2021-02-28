@@ -44,10 +44,14 @@ public class Booking {
   private String bookingDate;
 
   @NotNull
-  @Size(min = 5, max = 30)
+  @Size(min = 3, max = 90)
   @Column(name = "comments")
   @Getter @Setter
   private String comments;
+
+  @Column(name = "billed", insertable = false)
+  @Getter @Setter
+  private boolean billed;
 
   @Column(name = "creation_date", insertable = false, updatable = false)
   @Getter @Setter

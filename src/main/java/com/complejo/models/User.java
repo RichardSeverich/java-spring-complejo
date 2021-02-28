@@ -39,7 +39,7 @@ public class User {
   private String password;
 
   @NotNull
-  @Size(min = 4, max = 10)
+  @Size(min = 4, max = 15)
   @Column(name = "dni")
   @Getter @Setter
   private String dni;
@@ -90,7 +90,7 @@ public class User {
 
   @NotNull
   @Size(min = 5, max = 10)
-  @Pattern(regexp = "(admin|instructor)")
+  @Pattern(regexp = "(admin|client)")
   @Column(name = "type")
   @Getter @Setter
   private String type;

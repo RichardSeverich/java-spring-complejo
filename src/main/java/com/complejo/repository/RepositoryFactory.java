@@ -19,6 +19,12 @@ public class RepositoryFactory {
   @Autowired
   private RepositoryHoursIntervals repositoryHoursIntervals;
 
+  @Autowired
+  private RepositoryBillForPost repositoryBillForPost;
+
+  @Autowired
+  private RepositoryBillsDetail repositoryBillsDetail;
+
   /**
    *.
    * @param entityName.
@@ -34,6 +40,10 @@ public class RepositoryFactory {
         return repositoryBookings;
       case "hoursInterval":
         return repositoryHoursIntervals;
+      case "billForPost":
+        return repositoryBillForPost;
+      case "billDetail":
+        return repositoryBillsDetail;
       default:
         return repositoryUsers;
     }

@@ -4,14 +4,11 @@ import com.complejo.helpers.Helper;
 import com.complejo.models.HoursInterval;
 import com.complejo.responses.Response;
 import com.complejo.responses.ResponseBody;
-import com.complejo.services.ServiceDelete;
+
 import com.complejo.services.ServiceGet;
 import com.complejo.services.ServiceGetById;
-import com.complejo.services.ServicePost;
-import com.complejo.services.ServicePut;
-import com.complejo.support.Paths;
 
-import javax.validation.Valid;
+import com.complejo.support.Paths;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

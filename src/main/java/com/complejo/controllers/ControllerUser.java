@@ -2,6 +2,7 @@ package com.complejo.controllers;
 
 import com.complejo.helpers.Helper;
 import com.complejo.models.User;
+import com.complejo.models.DateFilter;
 import com.complejo.responses.Response;
 import com.complejo.responses.ResponseBody;
 import com.complejo.services.ServiceDelete;
@@ -9,6 +10,7 @@ import com.complejo.services.ServiceGet;
 import com.complejo.services.ServiceGetById;
 import com.complejo.services.ServicePost;
 import com.complejo.services.ServicePut;
+import com.complejo.services.ServiceGetFilterUsers;
 import com.complejo.support.Paths;
 
 import javax.validation.Valid;
@@ -39,6 +41,9 @@ public class ControllerUser {
 
   @Autowired
   private ServiceDelete<User> serviceDelete;
+
+  @Autowired
+  private ServiceGetFilterUsers serviceGetFilterUsers;
 
   @Autowired
   private Helper<User> helper;
@@ -107,6 +112,17 @@ public class ControllerUser {
     helper.setEntityName(ENTITY_NAME);
     helper.setId(id);
     Response<User> response = serviceDelete.getResponse();
+    return ResponseEntity.status(response.getHttpStatus()).body(response.getBody());
+  }
+
+  /**
+  * @param reportsRevenueFilter reportsRevenueFilter.
+  * @return Response Entity.
+  */
+  @SuppressWarnings("unchecked")
+  @RequestMapping(method = RequestMethod.POST, value = Paths.PATH_USERS_RESERVED)
+  public ResponseEntity<ResponseBody<User>> usersReserved(final @RequestBody @Valid DateFilter dateFilter) {
+    Response<User> response = serviceGetFilterUsers.getResponse(dateFilter);
     return ResponseEntity.status(response.getHttpStatus()).body(response.getBody());
   }
 }
