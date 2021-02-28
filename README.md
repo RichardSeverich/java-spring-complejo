@@ -276,7 +276,7 @@ POST localhost:8080/api/v1/reserved-resources
 POST localhost:8080/api/v1/bills
 ```
 
-#### : Bill
+#### Bill:
 
 ```
 POST localhost:8080/api/v1/bills/filter-date
@@ -318,7 +318,7 @@ DELETE localhost:8080/api/v1/bills-detail/{id}
 }
 ```
 
-#### : Resources Hours Bookings Bills BillsDetail Join
+#### Resources Hours Bookings Bills BillsDetail Join:
 
 ```
 POST localhost:8080/api/v1/bills/detail
