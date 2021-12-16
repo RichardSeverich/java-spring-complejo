@@ -20,6 +20,7 @@ public final class Paths {
   private static final String REPORTS_REVENUE = "/reports-revenue";
   private static final String RESERVED_RESOURCES = "/reserved-resources";
   private static final String ID = "/{id}";
+  private static final String YEAR = "/{year}";
   // Login
   public static final String PATH_LOGIN = VERSION + LOGIN;
   // Users
@@ -45,7 +46,7 @@ public final class Paths {
   // Reserved Hours
   public static final String PATH_RESERVED_HOURS = PATH_HOURS_INTERVALS + RESERVED_HOURS;
   // Reports Revenue
-  public static final String PATH_REPORTS_REVENUE = VERSION + REPORTS_REVENUE;
+  public static final String PATH_REPORTS_REVENUE_WITH_YEAR = VERSION + REPORTS_REVENUE + YEAR;
   // Reserved Resources
   public static final String PATH_RESERVED_RESOURCES = VERSION + RESERVED_RESOURCES;
   // Users Reserved
