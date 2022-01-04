@@ -336,6 +336,77 @@ POST localhost:8080/api/v1/bills/detail
 }
 ```
 
+#### Reports Revenues
+
+```
+GET localhost:8080//api/v1/reports-revenue/{year}
+
+{
+  [
+    {
+      "id":"1",
+      "month": "Enero",
+      "revenue": "8000"
+    },
+    {
+      "id":"2",
+      "month": "Febrero",
+      "revenue": "7540"
+    },
+    {
+      "id":"3",
+      "month": "Marzo",
+      "revenue": "9000"
+    },
+    {
+      "id":"4",
+      "month": "Abril",
+      "revenue": "6050"
+    },
+    {
+      "id":"5",
+      "month": "Mayo",
+      "revenue": "8440"
+    },
+    {
+      "id":"6",
+      "month": "Junio",
+      "revenue": "7830"
+    },
+    {
+      "id":"7",
+      "month": "Julio",
+      "revenue": "7540"
+    },
+    {
+      "id":"8",
+      "month": "Agosto",
+      "revenue": "9010"
+    },
+    {
+      "id":"9",
+      "month": "Septiembre",
+      "revenue": "6810"
+    },
+    {
+      "id":"10",
+      "month": "Octubre",
+      "revenue": "6420"
+    },
+    {
+      "id":"11",
+      "month": "Noviembre",
+      "revenue": "7000"
+    },
+    {
+      "id":"12",
+      "month": "Diciembre",
+      "revenue": "6000"
+    }
+  ]
+}
+```
+
 ## Contributing
 
 1. Fork it!
